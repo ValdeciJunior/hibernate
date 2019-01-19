@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/jan/2019 22:29:22 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.junior.Pagamento" table="PAGAMENTO" optimistic-lock="version">
+        <composite-id name="id" class="com.junior.PagamentoId">
+            <key-property name="id" type="long">
+                <column name="ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cdcurso" type="long">
+                <column name="CDCURSO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="data" type="date">
+                <column name="data" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
